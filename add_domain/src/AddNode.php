@@ -20,10 +20,11 @@ class AddNode {
 
     //$nids = \Drupal::entityQuery('node')->execute();
     
-    $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+    // $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
     $domain = 'dev_zyxware_com';
     $domain_access = 'field_domain_access';
-    foreach ($nodes as $entity) {
+    foreach ($nids as $nid) {
+      $entity = \Drupal\node\Entity\Node::load($nid);
       if ($entity->hasField($domain_access)) {
         $entity->set($domain_access, $domain);
         $results[] = $entity->save();
