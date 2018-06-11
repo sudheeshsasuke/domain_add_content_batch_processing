@@ -1,0 +1,7 @@
+add_domain.add_nodes:
+  path: '/add_domain/addnodes'
+  defaults:
+    _form: '\Drupal\add_domain\Form\AddNodeForm'
+    _title: 'Batch Example'
+  requirements:
+    _permission: 'access content'

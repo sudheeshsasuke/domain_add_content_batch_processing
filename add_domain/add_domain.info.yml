@@ -1,0 +1,5 @@
+name: add_domain
+type: module
+description: Example module for batch process to add nodes to domain
+core: 8.x
+package: Example
